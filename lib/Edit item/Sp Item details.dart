@@ -107,8 +107,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                             const Spacer(),
                             InkWell(
                               onTap: () {
-                                print(widget.productId);
-                                print("==================================");
+                              
 Provider.of<AdminController>(context,listen: false).deleteEditItem("special offers", widget.productId).then((value) {
   Navigator.of(context).pop();
 });
@@ -190,7 +189,7 @@ Provider.of<AdminController>(context,listen: false).deleteEditItem("special offe
                                           borderRadius: BorderRadius.circular(
                                               Width * 0.01),
                                           image: DecorationImage(
-                                            image: AssetImage(widget.image),
+                                            image: NetworkImage(widget.image),
                                             fit: BoxFit.cover,
                                           )),
                                     ),

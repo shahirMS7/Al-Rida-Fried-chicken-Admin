@@ -181,7 +181,7 @@ Provider.of<AdminController>(context,listen: false).deleteEditItem(widget.collec
                                           borderRadius: BorderRadius.circular(
                                               Width * 0.01),
                                           image: DecorationImage(
-                                            image: AssetImage(
+                                            image: NetworkImage(
                                                 widget.image),
                                             fit: BoxFit.cover,
                                           )),
