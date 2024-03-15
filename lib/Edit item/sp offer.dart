@@ -227,6 +227,7 @@ class SpOffer extends StatelessWidget {
                                                             MaterialPageRoute(
                                                               builder: (context) =>
                                                                   SpItemDetails(
+                                                                    productId: specialController.productsList[index].productID,
                                                                 title: specialController
                                                                     .productsList[
                                                                         index]

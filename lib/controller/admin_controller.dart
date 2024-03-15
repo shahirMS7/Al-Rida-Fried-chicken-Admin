@@ -477,4 +477,17 @@ class AdminController extends ChangeNotifier {
 
     notifyListeners();
   }
+
+  //delete delivery boy
+  Future deleteDeliveryBoy(docid)async{
+    firebaseFirestore.collection("deliveryBoys").doc(docid).delete();
+    notifyListeners();
+
+  }
+
+  //delete edit item
+  Future deleteEditItem(collectionName,proId)async{
+    firebaseFirestore.collection(collectionName).doc(proId).delete();
+    notifyListeners();
+  }
 }

@@ -1,16 +1,20 @@
 import 'package:admin/Edit%20item/edit%20alert.dart';
+import 'package:admin/controller/admin_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SpItemDetails extends StatefulWidget {
   final String title;
   final String discription;
   final String price;
   final String image;
+  final String productId;
 
   const SpItemDetails({
     super.key,
     required this.title,
+    required this.productId,
     required this.discription,
     required this.price,
     required this.image,
@@ -102,7 +106,14 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                             ),
                             const Spacer(),
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                print(widget.productId);
+                                print("==================================");
+Provider.of<AdminController>(context,listen: false).deleteEditItem("special offers", widget.productId).then((value) {
+  Navigator.of(context).pop();
+});
+
+                              },
                               child: SizedBox(
                                   height: Height * 0.06,
                                   width: Width * 0.06,

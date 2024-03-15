@@ -1,13 +1,17 @@
+import 'package:admin/controller/admin_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ItemDetails extends StatefulWidget {
   final String title;
   final String discription;
   final String price;
   final String image;
+  final String proId;
+  final collectionName;
 
-  const ItemDetails({super.key,required this.title,required this.discription,required this.price,required this.image,});
+  const ItemDetails({super.key,required this.title,required this.discription,required this.price,required this.image,required this.proId,required this.collectionName});
 
   @override
   State<ItemDetails> createState() => _ItemDetailsState();
@@ -95,7 +99,12 @@ class _ItemDetailsState extends State<ItemDetails> {
                             ),
                             Spacer(),
                             InkWell(
-                              onTap: (){},
+                              onTap: (){
+Provider.of<AdminController>(context,listen: false).deleteEditItem(widget.collectionName,widget. proId).then((value) {
+  Navigator.of(context).pop();
+});
+
+                              },
                               child: SizedBox(
                                   height: Height * 0.06,
                                   width: Width * 0.06,

@@ -12,48 +12,48 @@ class Breads extends StatelessWidget {
   Widget build(BuildContext context) {
     final Height = MediaQuery.of(context).size.height;
     final Width = MediaQuery.of(context).size.width;
-    List<Map<String, dynamic>> items = [
-      {
-        'title': 'Bun',
-        'image': 'asset/images/menu/bun.jpg',
-        'page': const ItemDetails(
-          title: 'Bun',
-          image: 'asset/images/menu/bun.jpg',
-          price: '9',
-          discription: 'Bun',
-        )
-      },
-      {
-        'title': 'Kuboose',
-        'image': 'asset/images/menu/kuboose.jpg',
-        'page': const ItemDetails(
-          title: 'Kuboose',
-          image: 'asset/images/menu/kuboose.jpg',
-          price: '9',
-          discription: 'Kuboose',
-        )
-      },
-      {
-        'title': 'Butter Bread',
-        'image': 'asset/images/menu/buttur-rotti-min.jpg',
-        'page': const ItemDetails(
-          title: 'Butter Bread',
-          image: 'asset/images/menu/buttur-rotti-min.jpg',
-          price: '19',
-          discription: 'Butter Bread',
-        )
-      },
-      {
-        'title': 'Garlic Bread',
-        'image': 'asset/images/menu/garlic-bread-min.jpg',
-        'page': const ItemDetails(
-          title: 'Garlic Bread',
-          image: 'asset/images/menu/garlic-bread-min.jpg',
-          price: '19',
-          discription: 'Garlic Bread',
-        )
-      },
-    ];
+    // List<Map<String, dynamic>> items = [
+    //   {
+    //     'title': 'Bun',
+    //     'image': 'asset/images/menu/bun.jpg',
+    //     'page':  ItemDetails(
+    //       title: 'Bun',
+    //       image: 'asset/images/menu/bun.jpg',
+    //       price: '9',
+    //       discription: 'Bun',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Kuboose',
+    //     'image': 'asset/images/menu/kuboose.jpg',
+    //     'page': const ItemDetails(
+    //       title: 'Kuboose',
+    //       image: 'asset/images/menu/kuboose.jpg',
+    //       price: '9',
+    //       discription: 'Kuboose',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Butter Bread',
+    //     'image': 'asset/images/menu/buttur-rotti-min.jpg',
+    //     'page': const ItemDetails(
+    //       title: 'Butter Bread',
+    //       image: 'asset/images/menu/buttur-rotti-min.jpg',
+    //       price: '19',
+    //       discription: 'Butter Bread',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Garlic Bread',
+    //     'image': 'asset/images/menu/garlic-bread-min.jpg',
+    //     'page': const ItemDetails(
+    //       title: 'Garlic Bread',
+    //       image: 'asset/images/menu/garlic-bread-min.jpg',
+    //       price: '19',
+    //       discription: 'Garlic Bread',
+    //     )
+    //   },
+    // ];
     return Scaffold(
       body: Container(
         height: Height,
@@ -227,6 +227,11 @@ class Breads extends StatelessWidget {
                                                                 builder:
                                                                     (context) =>
                                                                         ItemDetails(
+                                                                          collectionName: "Breads",
+
+                                                                          proId:breadsController
+                                                                              .productsList[index]
+                                                                              .productID, 
                                                                           title: breadsController
                                                                               .productsList[index]
                                                                               .productTitle,

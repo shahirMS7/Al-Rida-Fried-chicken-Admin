@@ -268,6 +268,11 @@ class FriedChicken extends StatelessWidget {
                                                               builder:
                                                                   (context) =>
                                                                       ItemDetails(
+                                                                        collectionName: "Menu",
+                                                                        proId: menuController
+                                                                    .productsList[
+                                                                        index]
+                                                                    .productID, 
                                                                 title: menuController
                                                                     .productsList[
                                                                         index]

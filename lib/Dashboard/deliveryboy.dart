@@ -190,7 +190,10 @@ class DelievryBoy extends StatelessWidget {
                                                               iconSize:
                                                                   Height * 0.05,
                                                               onPressed: () {
-                                                                //add
+                                                              delivryBoyController.deleteDeliveryBoy(delivryBoyController
+                                                                  .deliveryBoysList[
+                                                                      index]
+                                                                  .delvryBoyID);
                                                               },
                                                               icon: const Icon(Icons
                                                                   .delete_outline_outlined),

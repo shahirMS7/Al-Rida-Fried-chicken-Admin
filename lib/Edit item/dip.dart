@@ -12,48 +12,48 @@ class Dip extends StatelessWidget {
   Widget build(BuildContext context) {
     final Height = MediaQuery.of(context).size.height;
     final Width = MediaQuery.of(context).size.width;
-    List<Map<String, dynamic>> items = [
-      {
-        'title': 'Mayonnaise',
-        'image': 'asset/images/menu/mayo.jpeg',
-        'page': const ItemDetails(
-          title: 'Mayonnaise',
-          image: 'asset/images/menu/mayo.jpeg',
-          price: '19',
-          discription: 'Mayonnaise',
-        )
-      },
-      {
-        'title': 'Ketchup',
-        'image': 'asset/images/menu/ketchup.jpg',
-        'page': const ItemDetails(
-          title: 'Ketchup',
-          image: 'asset/images/menu/ketchup.jpg',
-          price: '19',
-          discription: 'Ketchup',
-        )
-      },
-      {
-        'title': 'Hummus',
-        'image': 'asset/images/menu/hummus.jpg',
-        'page': const ItemDetails(
-          title: 'Hummus',
-          image: 'asset/images/menu/hummus.jpg',
-          price: '19',
-          discription: 'Hummus',
-        )
-      },
-      {
-        'title': 'Pesto',
-        'image': 'asset/images/menu/pesto-dip.jpg',
-        'page': const ItemDetails(
-          title: 'Pesto',
-          image: 'asset/images/menu/pesto-dip.jpg',
-          price: '19',
-          discription: 'Pesto',
-        )
-      },
-    ];
+    // List<Map<String, dynamic>> items = [
+    //   {
+    //     'title': 'Mayonnaise',
+    //     'image': 'asset/images/menu/mayo.jpeg',
+    //     'page': const ItemDetails(
+    //       title: 'Mayonnaise',
+    //       image: 'asset/images/menu/mayo.jpeg',
+    //       price: '19',
+    //       discription: 'Mayonnaise',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Ketchup',
+    //     'image': 'asset/images/menu/ketchup.jpg',
+    //     'page': const ItemDetails(
+    //       title: 'Ketchup',
+    //       image: 'asset/images/menu/ketchup.jpg',
+    //       price: '19',
+    //       discription: 'Ketchup',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Hummus',
+    //     'image': 'asset/images/menu/hummus.jpg',
+    //     'page': const ItemDetails(
+    //       title: 'Hummus',
+    //       image: 'asset/images/menu/hummus.jpg',
+    //       price: '19',
+    //       discription: 'Hummus',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Pesto',
+    //     'image': 'asset/images/menu/pesto-dip.jpg',
+    //     'page': const ItemDetails(
+    //       title: 'Pesto',
+    //       image: 'asset/images/menu/pesto-dip.jpg',
+    //       price: '19',
+    //       discription: 'Pesto',
+    //     )
+    //   },
+    // ];
     return Scaffold(
       body: Container(
         height: Height,
@@ -225,6 +225,10 @@ class Dip extends StatelessWidget {
                                                                 builder:
                                                                     (context) =>
                                                                         ItemDetails(
+                                                                          collectionName: "Dip",
+                                                                          proId: dipController
+                                                                              .productsList[index]
+                                                                              .productID,
                                                                           title: dipController
                                                                               .productsList[index]
                                                                               .productTitle,

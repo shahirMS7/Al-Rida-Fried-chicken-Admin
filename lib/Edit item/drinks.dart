@@ -12,68 +12,68 @@ class Drinks extends StatelessWidget {
   Widget build(BuildContext context) {
     final Height = MediaQuery.of(context).size.height;
     final Width = MediaQuery.of(context).size.width;
-    List<Map<String, dynamic>> items = [
-      {
-        'title': '7 Up',
-        'image': 'asset/images/menu/7up.png',
-        'page': const ItemDetails(
-          title: '7 Up',
-          image: 'asset/images/menu/7up.png',
-          price: '39',
-          discription: '7 Up',
-        )
-      },
-      {
-        'title': 'Coca Cola',
-        'image': 'asset/images/menu/coca.png',
-        'page': const ItemDetails(
-          title: 'Coca Cola',
-          image: 'asset/images/menu/coca.png',
-          price: '39',
-          discription: 'Coca Cola',
-        )
-      },
-      {
-        'title': 'Pepsi',
-        'image': 'asset/images/menu/pepsi.png',
-        'page': const ItemDetails(
-          title: 'Pepsi',
-          image: 'asset/images/menu/pepsi.png',
-          price: '39',
-          discription: 'Pepsi',
-        )
-      },
-      {
-        'title': 'Mirinda',
-        'image': 'asset/images/menu/miri.png',
-        'page': const ItemDetails(
-          title: 'Mirinda',
-          image: 'asset/images/menu/miri.png',
-          price: '39',
-          discription: 'Mirinda',
-        )
-      },
-      {
-        'title': 'Montain Dew',
-        'image': 'asset/images/menu/mountain dew.png',
-        'page': const ItemDetails(
-          title: 'Montain Dew',
-          image: 'asset/images/menu/mountain dew.png',
-          price: '39',
-          discription: 'Montain Dew',
-        )
-      },
-      {
-        'title': 'Water',
-        'image': 'asset/images/menu/water.png',
-        'page': const ItemDetails(
-          title: 'Water',
-          image: 'asset/images/menu/water.png',
-          price: '39',
-          discription: 'Water',
-        )
-      },
-    ];
+    // List<Map<String, dynamic>> items = [
+    //   {
+    //     'title': '7 Up',
+    //     'image': 'asset/images/menu/7up.png',
+    //     'page': const ItemDetails(
+    //       title: '7 Up',
+    //       image: 'asset/images/menu/7up.png',
+    //       price: '39',
+    //       discription: '7 Up',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Coca Cola',
+    //     'image': 'asset/images/menu/coca.png',
+    //     'page': const ItemDetails(
+    //       title: 'Coca Cola',
+    //       image: 'asset/images/menu/coca.png',
+    //       price: '39',
+    //       discription: 'Coca Cola',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Pepsi',
+    //     'image': 'asset/images/menu/pepsi.png',
+    //     'page': const ItemDetails(
+    //       title: 'Pepsi',
+    //       image: 'asset/images/menu/pepsi.png',
+    //       price: '39',
+    //       discription: 'Pepsi',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Mirinda',
+    //     'image': 'asset/images/menu/miri.png',
+    //     'page': const ItemDetails(
+    //       title: 'Mirinda',
+    //       image: 'asset/images/menu/miri.png',
+    //       price: '39',
+    //       discription: 'Mirinda',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Montain Dew',
+    //     'image': 'asset/images/menu/mountain dew.png',
+    //     'page': const ItemDetails(
+    //       title: 'Montain Dew',
+    //       image: 'asset/images/menu/mountain dew.png',
+    //       price: '39',
+    //       discription: 'Montain Dew',
+    //     )
+    //   },
+    //   {
+    //     'title': 'Water',
+    //     'image': 'asset/images/menu/water.png',
+    //     'page': const ItemDetails(
+    //       title: 'Water',
+    //       image: 'asset/images/menu/water.png',
+    //       price: '39',
+    //       discription: 'Water',
+    //     )
+    //   },
+    // ];
     return Scaffold(
       body: Container(
         height: Height,
@@ -247,6 +247,11 @@ class Drinks extends StatelessWidget {
                                                               builder:
                                                                   (context) =>
                                                                       ItemDetails(
+                                                                        collectionName: "Drinks",
+                                                                        proId:drinksController
+                                                                    .productsList[
+                                                                        index]
+                                                                    .productID,
                                                                 title: drinksController
                                                                     .productsList[
                                                                         index]
